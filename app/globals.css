@@ -1,0 +1,482 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Portuguese Sports Magazine Theme - Bright Red, Green, Gold */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.2 0.02 30);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.02 30);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.02 30);
+
+  /* Portuguese Red - Primary brand color */
+  --primary: oklch(0.55 0.25 25);
+  --primary-foreground: oklch(1 0 0);
+
+  --secondary: oklch(0.97 0.01 120);
+  --secondary-foreground: oklch(0.2 0.02 30);
+  --muted: oklch(0.96 0.01 85);
+  --muted-foreground: oklch(0.45 0.02 30);
+  --accent: oklch(0.75 0.15 85);
+  --accent-foreground: oklch(0.2 0.02 30);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.88 0.01 85);
+  --input: oklch(0.97 0.01 85);
+  --ring: oklch(0.55 0.25 25);
+  --chart-1: oklch(0.55 0.25 25);
+  --chart-2: oklch(0.45 0.18 145);
+  --chart-3: oklch(0.75 0.15 85);
+  --chart-4: oklch(0.6 0.2 35);
+  --chart-5: oklch(0.5 0.2 150);
+  --radius: 0.5rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.2 0.02 30);
+  --sidebar-primary: oklch(0.55 0.25 25);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.97 0.01 85);
+  --sidebar-accent-foreground: oklch(0.2 0.02 30);
+  --sidebar-border: oklch(0.88 0.01 85);
+  --sidebar-ring: oklch(0.55 0.25 25);
+
+  /* Porto FC Colors - Bright and Vibrant */
+  --porto-green: #006633;
+  --porto-green-dark: #004422;
+  --porto-green-light: #00aa55;
+  --porto-gold: #ffd700;
+  --porto-gold-dark: #daa520;
+  --porto-gold-light: #ffed4e;
+  --porto-white: #ffffff;
+  --porto-cream: #fffef7;
+  --porto-navy: #1a1a2e;
+  --porto-grey: #4a4a5e;
+  --porto-grey-light: #e5e5ea;
+  --porto-red: #dc143c;
+  --porto-red-dark: #b22222;
+
+  /* Portuguese Sports Colors - Red, Green, Gold */
+  --portugal-red: oklch(0.55 0.25 25);
+  --portugal-red-dark: oklch(0.45 0.24 20);
+  --portugal-red-light: oklch(0.65 0.22 30);
+  --portugal-green: oklch(0.45 0.18 145);
+  --portugal-green-dark: oklch(0.35 0.17 140);
+  --portugal-green-light: oklch(0.55 0.16 150);
+  --portugal-gold: oklch(0.75 0.15 85);
+  --portugal-gold-dark: oklch(0.65 0.14 80);
+  --portugal-gold-light: oklch(0.85 0.12 90);
+  --sports-white: oklch(1 0 0);
+  --sports-cream: oklch(0.98 0.01 85);
+  --sports-gray: oklch(0.5 0.01 30);
+  --sports-gray-light: oklch(0.92 0.01 30);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Portuguese sports color mappings */
+  --color-portugal-red: var(--portugal-red);
+  --color-portugal-red-dark: var(--portugal-red-dark);
+  --color-portugal-red-light: var(--portugal-red-light);
+  --color-portugal-green: var(--portugal-green);
+  --color-portugal-green-dark: var(--portugal-green-dark);
+  --color-portugal-green-light: var(--portugal-green-light);
+  --color-portugal-gold: var(--portugal-gold);
+  --color-portugal-gold-dark: var(--portugal-gold-dark);
+  --color-portugal-gold-light: var(--portugal-gold-light);
+  --color-sports-white: var(--sports-white);
+  --color-sports-cream: var(--sports-cream);
+  --color-sports-gray: var(--sports-gray);
+  --color-sports-gray-light: var(--sports-gray-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Porto FC Color Utilities */
+.bg-porto-green {
+  background-color: var(--porto-green);
+}
+
+.bg-porto-green-dark {
+  background-color: var(--porto-green-dark);
+}
+
+.bg-porto-green-light {
+  background-color: var(--porto-green-light);
+}
+
+.bg-porto-gold {
+  background-color: var(--porto-gold);
+}
+
+.bg-porto-gold-dark {
+  background-color: var(--porto-gold-dark);
+}
+
+.bg-porto-gold-light {
+  background-color: var(--porto-gold-light);
+}
+
+.bg-porto-white {
+  background-color: var(--porto-white);
+}
+
+.bg-porto-cream {
+  background-color: var(--porto-cream);
+}
+
+.bg-porto-navy {
+  background-color: var(--porto-navy);
+}
+
+.bg-porto-grey {
+  background-color: var(--porto-grey);
+}
+
+.bg-porto-grey-light {
+  background-color: var(--porto-grey-light);
+}
+
+.bg-porto-red {
+  background-color: var(--porto-red);
+}
+
+.bg-porto-red-dark {
+  background-color: var(--porto-red-dark);
+}
+
+.text-porto-green {
+  color: var(--porto-green);
+}
+
+.text-porto-green-dark {
+  color: var(--porto-green-dark);
+}
+
+.text-porto-green-light {
+  color: var(--porto-green-light);
+}
+
+.text-porto-gold {
+  color: var(--porto-gold);
+}
+
+.text-porto-gold-dark {
+  color: var(--porto-gold-dark);
+}
+
+.text-porto-gold-light {
+  color: var(--porto-gold-light);
+}
+
+.text-porto-navy {
+  color: var(--porto-navy);
+}
+
+.text-porto-grey {
+  color: var(--porto-grey);
+}
+
+.text-porto-grey-light {
+  color: var(--porto-grey-light);
+}
+
+.text-porto-red {
+  color: var(--porto-red);
+}
+
+.text-porto-red-dark {
+  color: var(--porto-red-dark);
+}
+
+.border-porto-green {
+  border-color: var(--porto-green);
+}
+
+.border-porto-green-dark {
+  border-color: var(--porto-green-dark);
+}
+
+.border-porto-gold {
+  border-color: var(--porto-gold);
+}
+
+.border-porto-gold-dark {
+  border-color: var(--porto-gold-dark);
+}
+
+.border-porto-grey-light {
+  border-color: var(--porto-grey-light);
+}
+
+.border-porto-red {
+  border-color: var(--porto-red);
+}
+
+.hover\:bg-porto-green:hover {
+  background-color: var(--porto-green);
+}
+
+.hover\:bg-porto-green-dark:hover {
+  background-color: var(--porto-green-dark);
+}
+
+.hover\:bg-porto-gold:hover {
+  background-color: var(--porto-gold);
+}
+
+.hover\:bg-porto-red:hover {
+  background-color: var(--porto-red);
+}
+
+.hover\:text-porto-green:hover {
+  color: var(--porto-green);
+}
+
+.hover\:text-porto-green-dark:hover {
+  color: var(--porto-green-dark);
+}
+
+.hover\:text-porto-gold:hover {
+  color: var(--porto-gold);
+}
+
+.hover\:text-porto-red:hover {
+  color: var(--porto-red);
+}
+
+.hover\:border-porto-green:hover {
+  border-color: var(--porto-green);
+}
+
+.hover\:border-porto-gold:hover {
+  border-color: var(--porto-gold);
+}
+
+.hover\:border-porto-red:hover {
+  border-color: var(--porto-red);
+}
+
+/* Portuguese Sports Color Utilities */
+.bg-portugal-red {
+  background-color: var(--portugal-red);
+}
+
+.bg-portugal-red-dark {
+  background-color: var(--portugal-red-dark);
+}
+
+.bg-portugal-red-light {
+  background-color: var(--portugal-red-light);
+}
+
+.bg-portugal-green {
+  background-color: var(--portugal-green);
+}
+
+.bg-portugal-green-dark {
+  background-color: var(--portugal-green-dark);
+}
+
+.bg-portugal-green-light {
+  background-color: var(--portugal-green-light);
+}
+
+.bg-portugal-gold {
+  background-color: var(--portugal-gold);
+}
+
+.bg-portugal-gold-dark {
+  background-color: var(--portugal-gold-dark);
+}
+
+.bg-portugal-gold-light {
+  background-color: var(--portugal-gold-light);
+}
+
+.bg-sports-white {
+  background-color: var(--sports-white);
+}
+
+.bg-sports-cream {
+  background-color: var(--sports-cream);
+}
+
+.bg-sports-gray {
+  background-color: var(--sports-gray);
+}
+
+.bg-sports-gray-light {
+  background-color: var(--sports-gray-light);
+}
+
+.text-portugal-red {
+  color: var(--portugal-red);
+}
+
+.text-portugal-red-dark {
+  color: var(--portugal-red-dark);
+}
+
+.text-portugal-green {
+  color: var(--portugal-green);
+}
+
+.text-portugal-green-dark {
+  color: var(--portugal-green-dark);
+}
+
+.text-portugal-gold {
+  color: var(--portugal-gold);
+}
+
+.text-portugal-gold-dark {
+  color: var(--portugal-gold-dark);
+}
+
+.text-sports-gray {
+  color: var(--sports-gray);
+}
+
+.border-portugal-red {
+  border-color: var(--portugal-red);
+}
+
+.border-portugal-red-dark {
+  border-color: var(--portugal-red-dark);
+}
+
+.border-portugal-green {
+  border-color: var(--portugal-green);
+}
+
+.border-portugal-green-dark {
+  border-color: var(--portugal-green-dark);
+}
+
+.border-portugal-gold {
+  border-color: var(--portugal-gold);
+}
+
+.border-portugal-gold-dark {
+  border-color: var(--portugal-gold-dark);
+}
+
+.border-sports-gray-light {
+  border-color: var(--sports-gray-light);
+}
+
+.hover\:bg-portugal-red:hover {
+  background-color: var(--portugal-red);
+}
+
+.hover\:bg-portugal-red-dark:hover {
+  background-color: var(--portugal-red-dark);
+}
+
+.hover\:bg-portugal-green:hover {
+  background-color: var(--portugal-green);
+}
+
+.hover\:bg-portugal-gold:hover {
+  background-color: var(--portugal-gold);
+}
+
+.hover\:text-portugal-red:hover {
+  color: var(--portugal-red);
+}
+
+.hover\:text-portugal-green:hover {
+  color: var(--portugal-green);
+}
+
+.hover\:text-portugal-gold:hover {
+  color: var(--portugal-gold);
+}
+
+.hover\:border-portugal-red:hover {
+  border-color: var(--portugal-red);
+}
+
+.hover\:border-portugal-green:hover {
+  border-color: var(--portugal-green);
+}
