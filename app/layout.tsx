@@ -19,9 +19,6 @@ export const metadata: Metadata = {
   title: "Melhores Sites de Apostas em Portugal 2025 | Top Casas de Apostas Licenciadas",
   description:
     "Descubra os melhores sites de apostas desportivas em Portugal. Análise completa dos top bookmakers licenciados, bónus exclusivos, odds competitivas e apostas seguras. Futebol, ténis, basquetebol, Fórmula 1 e muito mais.",
-  verification: {
-    google: "verification-code-here", // User should add their Google Search Console verification
-  },
   category: "Sports Betting Reviews",
   classification: "Informational/Review Site",
   keywords: [
@@ -104,7 +101,6 @@ export const metadata: Metadata = {
     rating: "general",
     distribution: "global",
   },
-    generator: 'v0.app'
 }
 
 export default function RootLayout({
