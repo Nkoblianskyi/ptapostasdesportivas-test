@@ -9,21 +9,21 @@ export function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
-    <section className="relative pt-16 md:pt-24 pb-3 md:pb-8 bg-gradient-to-b from-porto-cream to-porto-white md:bg-gradient-to-b md:from-porto-cream md:to-porto-white max-h-[250px] md:max-h-[350px] overflow-hidden">
+    <section className="relative pt-18 md:pt-24 pb-3 md:pb-8 bg-gradient-to-b from-porto-cream to-porto-white md:bg-gradient-to-b md:from-porto-cream md:to-porto-white max-h-[250px] md:max-h-[350px] overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center md:hidden"
         style={{ backgroundImage: "url('/mobile-hero-bg.jpg')" }}
       />
-      <div className="absolute inset-0 bg-white/65 md:hidden" />
+      <div className="absolute inset-0 bg-white/75 md:hidden" />
 
       <div className="absolute top-12 md:top-20 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-porto-gold to-transparent" />
 
-      <div className="container mx-auto px-4 md:px-6 max-w-[1400px] h-full flex flex-col justify-center relative z-10">
+      <div className="container mx-auto px-6 md:px-6 max-w-[1400px] h-full flex flex-col justify-center relative z-10">
 
         <div className="text-center mb-1 md:mb-3">
           <h1 className="text-xl md:text-4xl lg:text-5xl font-black mb-1 md:mb-2 leading-tight text-balance">
             <span className="text-porto-green">Melhores Sites de Apostas</span>{" "}
-            <span className="text-porto-gold">Portugal 2025</span>
+            <span className="text-porto-red">Portugal 2025</span>
           </h1>
 
           <p className="text-xs md:text-base text-porto-navy font-bold mb-1 md:mb-3 leading-snug">
