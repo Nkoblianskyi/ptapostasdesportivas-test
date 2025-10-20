@@ -9,7 +9,7 @@ export function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
-    <section className="relative pt-18 md:pt-24 pb-3 md:pb-8 bg-gradient-to-b from-porto-cream to-porto-white md:bg-gradient-to-b md:from-porto-cream md:to-porto-white max-h-[250px] md:max-h-[350px] overflow-hidden">
+    <section className="relative pt-18 md:pt-24 pb-3 md:pb-8 bg-gradient-to-b from-porto-cream to-porto-white md:bg-gradient-to-b md:from-porto-cream md:to-porto-white max-h-[250px] sm:max-h-[350px] overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center md:hidden"
         style={{ backgroundImage: "url('/mobile-hero-bg.jpg')" }}
