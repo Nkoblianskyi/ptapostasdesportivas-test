@@ -49,7 +49,7 @@ export function RatingList({ sites }: RatingListProps) {
   return (
     <section className="py-4 md:py-4">
       <div className="container mx-auto px-4 md:px-6 max-w-[1400px]">
-        <div className="mb-8 md:mb-12 text-center hidden md:block">
+        <div className="mb-8 md:mb-12 text-center hidden">
           <div className="inline-flex items-center gap-3 mb-4">
             <div className="h-1 w-12 bg-porto-green" />
             <Award className="w-6 h-6 text-porto-gold" />
